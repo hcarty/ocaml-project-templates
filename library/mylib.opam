@@ -1,0 +1,19 @@
+opam-version: "1.2"
+maintainer: "Legit Person <toteslegit@example.com>"
+authors: [ "Legit Person <toteslegit@example.com>" ]
+license: "MIT"
+homepage: "https://github.com/imarealperson/mylib"
+dev-repo: "https://github.com/imarealperson/mylib.git"
+bug-reports: "https://github.com/imarealperson/mylib"
+build: ["jbuilder" "build" "-p" name "-j" jobs]
+build-test: ["jbuilder" "runtest" "-p" name]
+build-doc: [ "jbuilder" "build" "@doc" "-p" name]
+depends: [
+  "alcotest" {test & >= "0.8.1"}
+  "qcheck" {test & >= "0.7"}
+  "benchmark" {test & >= "1.4"}
+  "odoc" {doc & >= "1.1.1"}
+  "logs" {>= "0.6.2"}
+  "jbuilder" {build & >= "1.0+beta13"}
+]
+available: [ ocaml-version >= "4.05.0" ]

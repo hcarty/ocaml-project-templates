@@ -1,0 +1,10 @@
+(jbuild_version 1)
+
+(executable
+ ((name test)
+  (libraries (mylib qcheck alcotest))))
+
+(alias
+ ((name runtest)
+  (deps (test.exe))
+  (action (run ${<} --color=always))))

@@ -1,0 +1,6 @@
+(jbuild_version 1)
+
+(library
+ ((name mylib)
+  (public_name mylib)
+  (libraries (astring fmt logs rresult))))
